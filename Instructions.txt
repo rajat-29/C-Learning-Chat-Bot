@@ -1,0 +1,3 @@
+Some commands are already inserted in textes file. if we will enter another line bot will ask you for ans and learn it!!
+First line in textes file is for user and second for bot and lines will be stored so on!!
+ 

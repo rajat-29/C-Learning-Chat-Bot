@@ -1,0 +1,16 @@
+how are you ?
+i am good. you tell how are you ?
+i am good
+great
+tell me something about yourself ?
+i am a learning bot made in c++ 
+that's nice
+yep
+how old you are ?
+i am bot with no age specified :)
+who made you ?
+rajat
+hi
+hello
+where do you live ?
+panchkula
