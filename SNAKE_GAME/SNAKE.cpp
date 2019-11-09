@@ -7,8 +7,8 @@
 #include <windows.h>
 using namespace std;
 
-int foodx=2;
-int foody=2;
+int foodx=10;
+int foody=20;
 int x=1;
 int y=1;
 int score=0;
@@ -21,8 +21,7 @@ class body;
 
 enum direction{STOP=0,LEFT,RIGHT,DOWN,UP,OVER};
 direction dir;
-   
-    
+       
 class board
 {
    protected:
@@ -46,11 +45,6 @@ class board
    f.push_back('B');
    f.push_back('P'); 
 	}
-  
-   
-   
-   
-   
    friend class food; 
    friend class body;
 };
@@ -65,19 +59,9 @@ class food
 	void popfood(board &ob10)
 	{	
 	    if(x==foodx && y==foody)
-	    {
-	    	fru=rand()%4+1;
-	    	if(fru==0)
-     	score=score+10;
-     	if(fru==1)
-     	score=score+15;
-     	if(fru==2)
-     	score=score+20;
-     	if(fru==3)
-     	score=score+25;
-     	if(fru==4)
-     	score=score+30;  
+	    { 
 	    srand(time(0));
+	    fru=rand()%4+1; 
      	foodx=rand()%40+1;
      	foody=rand()%40+1;
      	
@@ -94,7 +78,7 @@ class food
 		drawfood(ob10);
      	coX.insert(coX.begin(),x);
      	coY.insert(coY.begin(),y);
-     	  	
+     	 score = score+10; 	
         }
     }		
 };
@@ -199,10 +183,8 @@ class body
 				}
 				cout<<endl;
 			}
-			cout<<"Score = "<<score;
-			
+			cout<<"Score = "<<score;			
 		}
-		
 };
 
 int main()
@@ -248,6 +230,7 @@ int main()
 			cout<<endl<<"GAME OVER PLAYER "<<name;
 			break;
 		}
+		
 		Sleep(raj);
 	}
 	return 0;
